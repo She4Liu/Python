@@ -1,0 +1,32 @@
+# 注意，.reverse(), .sort(), sorted()函数都只能对list进行操作，因此需要先转换为list形式，然后在转换回str形式, 而使用字符串切片形式则无需准换形式
+
+1.  .reverse()方法：
+name = 'alyssa'
+name1 = list(name)
+name1.reverse()
+new_name = ''
+for i in name1:
+  new_name += i
+  
+  
+2.  .sort()方法, 与.reverse()方法类似,都是直接改变列表本身
+name = 'alyssa'
+name1 = list(name)
+name1.sort(reverse = True)
+new_name = ''
+for i in name1:
+  new_name += i
+
+
+3.  sorted()方法，注意，sorted()函数并不改变列表本身，因此需要一个新的列表来接收
+name = 'alyssa'
+name1 = list(name)
+name1 = sorted(name1, reverse = True)
+new_name = ''
+for i in name1:
+  new_name += i
+  
+
+4.  字符串切片方法：
+name = 'alyssa'
+new_name = name[::-1]
